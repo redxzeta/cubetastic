@@ -6,6 +6,7 @@ public class playermovement : MonoBehaviour {
     public float forwardForce = 2000f;
     public float sidewaysForce = 500f;
     public float counter = 1f;
+    public float forceValue = 10f;
     // Use this for initialization
     /*
 	void Start () {
@@ -15,6 +16,7 @@ public class playermovement : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate () {
         rb.AddForce(0, 0, forwardForce * Time.deltaTime);
+        rb.AddForce(-Vector3.up * forceValue);
         if (Input.GetKey("d"))  // If the player is pressing the "d" key
         {
             // Add a force to the right
