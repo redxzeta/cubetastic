@@ -16,7 +16,7 @@ public class playermovement : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate () {
         rb.AddForce(0, 0, forwardForce * Time.deltaTime);
-        rb.AddForce(-Vector3.up * forceValue);
+        
         if (Input.GetKey("d"))  // If the player is pressing the "d" key
         {
             // Add a force to the right
@@ -45,7 +45,7 @@ public class playermovement : MonoBehaviour {
         }
         if (Input.GetKey("space"))
         {
-            forwardForce = 8000;
+           
             Debug.Log(forwardForce);
         }
         if (rb.position.y < -1f)
